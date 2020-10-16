@@ -2,9 +2,138 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<title>Vowel Counter</title>
+<link href="vowel_count.css" rel="stylesheet">
 </head>
 
 <body>
+	
+	<h1 align="center">Vowel Counter</h1>
+	<div align="center">
+	<input type="text" id="center" size="100" align="center">
+	<br>
+	<br>
+	<input type="submit" value="submit" onClick="countvowles()">
+	</div>
+		
+	<br>
+	<br>
+	<br>
+	
+	<br>
+	<h2 id="h11"></h2>
+	<br>
+	
+	<div id="opClass">
+	<label for="count_a">vowel a in text - </label>
+	<br>
+	<input type="text" id="count_a" size="100" align="center">
+	
+	<br>
+	<br>
+		
+	<label for="count_e">vowel e in text - </label>
+	<br>
+	<input type="text" id="count_e" size="100" align="center">
+	
+	<br>
+	<br>
+	
+	<label for="count_i">vowel i in text - </label>
+	<br>
+	<input type="text" id="count_i" size="100" align="center">
+	
+	<br>
+	<br>
+	
+	<label for="count_o">vowel o in text - </label>
+	<br>
+	<input type="text" id="count_o" size="100" align="center">
+	
+	<br>
+	<br>
+	
+	<label for="count_u">vowel u in text - </label>
+	<br>
+	<input type="text" id="count_u" size="100" align="center">
+	<br>
+	<br>
+	
+	<label for="count_all">total vowels in text - </label>
+	<br>
+	<input type="text" id="count_all" size="100" align="center">
+	</div>
+	
+	<script>
+	
+	function countvowles()	{
+	
+	
+		
+	var count_a = 0;
+	var count_e = 0;
+	var count_i = 0;
+	var count_o = 0;
+	var count_u = 0;
+		
+	var count = ["a","e","i","o","u"];	
+	var text = document.getElementById("center").value.toLowerCase();
+	
+	for(var i = 0;i <= 4; i++)
+	document.getElementById("count_"+count[i]).style.background = "white";
+		
+		
+	for(var i = 0; i < text.length; i++)
+		{
+			if(text[i] == "a") {count_a++;}
+			if(text[i] == "e") {count_e++;}
+			if(text[i] == "i") {count_i++;}
+			if(text[i] == "o") {count_o++;}
+			if(text[i] == "u") {count_u++;}
+			
+		}
+	var l = Math.max(count_a , count_e , count_i , count_o , count_u);
+		
+		
+	var count_all = count_a + count_e + count_i + count_o + count_u;
+	
+		if(count_all == 0)
+			{
+				document.getElementById("h11").innerHTML = "No Vowels Found !!!"	
+				
+			}
+		else{
+			document.getElementById("h11").innerHTML = "Vowels Found !!!"	
+	
+		document.getElementById("opClass").style.opacity = 1;
+
+			
+			
+	document.getElementById("count_a").value = count_a;
+	document.getElementById("count_e").value = count_e;
+	document.getElementById("count_i").value = count_i;
+	document.getElementById("count_o").value = count_o;
+	document.getElementById("count_u").value = count_u;
+		
+	document.getElementById("count_all").value = count_all;
+			
+	for(var i = 0;i <= 4; i++){
+		if(document.getElementById("count_"+count[i]).value == l){
+			document.getElementById("count_"+count[i]).style.background = "yellow";
+		}
+	}
+	
+		}
+	}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>

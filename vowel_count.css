@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{font-family: 'Staatliches', cursive;}
+
+#center{
+	border-radius: 100px;
+	padding: 10px;
+	
+	
+}
+
+#count_a{border-radius: 50px;}
+#count_e{border-radius: 50px;}
+#count_i{border-radius: 50px;}
+#count_o{border-radius: 50px;}
+#count_u{border-radius: 50px;}
+#count_all{border-radius: 50px;}
+
+#h11{
+	color: green;
+}
+#opClass {
+    opacity: 0;
+  
+}
+
+
