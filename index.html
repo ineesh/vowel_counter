@@ -5,6 +5,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 <title>Vowel Counter</title>
 <link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +26,24 @@
 	<br>
 	<h2 id="h11"></h2>
 	<br>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<div id="opClass">
 	<label for="count_a">vowel a in text - </label>
@@ -67,6 +87,8 @@
 	
 	<script>
 	
+		
+
 	function countvowles()	{
 	
 	
@@ -98,6 +120,11 @@
 		
 	var count_all = count_a + count_e + count_i + count_o + count_u;
 	
+		if(count_all => 0)
+		alert("vowels found - " + count_all + "\nfor more info please press ok");
+		else
+			alert("no vowels found!!\nfor more info please press ok")
+		
 		if(count_all == 0)
 			{
 				document.getElementById("h11").innerHTML = "No Vowels Found !!!"	
